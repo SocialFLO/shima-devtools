@@ -1,0 +1,26 @@
+/* styles */
+/* called by your view template */
+
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 0;
+}
+
+.app-container {
+  width: 100%;
+}
+
+.shima-view {
+  width: 100%;
+  background: url('https://cdn.glitch.com/ee5f60f9-5a06-44de-938e-e25a35f34346%2Fbackground.jpg?1503887420489') no-repeat center fixed;
+  background-size: cover;
+  height: 450px;
+  padding: 20px 35px;
+}

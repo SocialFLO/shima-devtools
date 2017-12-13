@@ -1,26 +1,180 @@
 /* styles */
 /* called by your view template */
 
-/* You might want to try something fancier: */
-/* less: http://lesscss.org/ */
-
 * {
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: helvetica, arial, sans-serif;
+  height: 100%;
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .app-container {
+  height: 100%;
   width: 100%;
 }
 
-.shima-view {
+.button-row {
+  text-align: center;
+}
+
+.button-row > .lfo-button-link {
+  margin-right: 30px;
+}
+
+.eyewear-pane {
+  float: right;
+  height: 240px;
+  width: 428px;
+}
+
+.eyewear-view {
   width: 100%;
-  background: url('https://cdn.glitch.com/ee5f60f9-5a06-44de-938e-e25a35f34346%2Fbackground.jpg?1503887420489') no-repeat center fixed;
+  background: url('https://cdn.glitch.com/ee5f60f9-5a06-44de-938e-e25a35f34346%2FsocialFLO%20background.png?1504233807523') no-repeat center fixed;
   background-size: cover;
   height: 450px;
   padding: 20px 35px;
+}
+
+.header {
+  height: 60px;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.header > div {
+  display: flex;
+  align-items: center;
+}
+
+.header-text {
+  color: #808080;
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 0 40px;
+}
+
+.header-logo {
+  width: 130px;
+  position: absolute;
+}
+
+.image-link {
+  position: absolute;
+  margin-left: 45%;
+  margin-top: -20px;
+}
+
+.header-left {
+  margin-right: auto;
+}
+
+.header-right {
+  margin-left: auto;
+}
+
+.result-text {
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 200;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.mod-name {
+  color: white;
+  margin-left: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.footer {
+  background-color: #000;
+  height: 100%;
+}
+
+.lfo-button {
+  background-color: #000;
+  color: #fff;
+  height: 50px;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  width: 300px;
+}
+
+.status-bar {
+  height: 50px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.status-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.status-logo > img {
+  height: 17px;
+  margin-left: -187px;
+  margin-top: 10px;
+  width: 171px;
+}
+
+.status-running {
+  border-bottom: 3px solid #7ED321;
+  border-top: 3px solid #7ED321;
+  color: #fff;
+  float: left;
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+.simulateTouchInput {
+  animation: slideCircle 3s infinite;
+  background: url('https://cdn.glitch.com/ee5f60f9-5a06-44de-938e-e25a35f34346%2FSelector.png?1505444076373') no-repeat;
+  height: 55px;
+  position: absolute;
+  width: 55px;
+}
+
+@keyframes slideCircle {
+  from {
+    left: 85%;
+  }
+
+  to {
+    left: 100%;
+  }
+} 
+
+@media (max-width: 900px) {
+  .header-text {
+    font-size: 10px;
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-logo {
+    display: none;
+  }
+  .mod-name {
+    font-size: 12px;
+  }
 }

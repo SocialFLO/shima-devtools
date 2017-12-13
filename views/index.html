@@ -1,18 +1,11 @@
 <!-- This is a static file -->
 <!-- served from your routes in server.js -->
 
-<!-- You might want to try something fancier: -->
-<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
-<!-- pug: https://pugjs.org/ -->
-<!-- haml: http://haml.info/ -->
-<!-- hbs(handlebars): http://handlebarsjs.com/ -->
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>LAFORGE Optical</title>
-    <meta name="description" content="A cool thing made with Glitch">
-<!--     <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon"> -->
+    <meta name="description" content="LAFORGE Shima Devtools">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +13,65 @@
   </head>
   <body>
     <div class="app-container">
-      <div id="js-shimaView" class="shima-view">
+      <div class="header">
+        <a href="https://laforgeoptical.com" target="_blank" class="image-link">
+          <img src="https://cdn.glitch.com/ee5f60f9-5a06-44de-938e-e25a35f34346%2FsocialFLO%20simulator%20logo.png?1513146690583" class="header-logo" />
+        </a>
+        <div class="header-left">
+          <h1 id="js-mod-name" class="mod-name">
+            MOD NAME
+          </h1>
+          <a href="https://glitch.com/edit/#!/eyewear-simulator" target="_blank">
+            <h3 class="header-text">
+              VIEW CODE ON GLITCH
+            </h3>
+          </a>
+        </div>
+        <div class="header-right">
+          <a href="https://www.laforgexd.com/forum/_mods" target="_blank">
+            <h3 class="header-text">
+            Forums
+            </h3>
+          </a>
+          <a href="https://glitch.com/edit/#!/eyewear-simulator" target="_blank">
+            <h3 class="header-text">
+              Documentation
+            </h3>
+          </a>
+        </div>
+      </div>
+      <h3 class="result-text">
+        Result
+      </h3>
+      <div id="js-eyewearView" class="eyewear-view">
+        <eyewear-pane class="eyewear-pane">
+          <!-- Insert your markup within the eyewear-pane tag.-->
+          <!-- Your root element should have this attribute declared: slot="devpane" -->
+          <!-- i.e. <div slot="devpane"> -->
+
+        </eyewear-pane>
+      </div>
+      <div class="footer">
+        <div class="status-bar">
+          <div class="status-running">
+            YOUR MOD IS RUNNING
+          </div>
+          <div class="status-logo">
+            <img src="https://cdn.glitch.com/ee5f60f9-5a06-44de-938e-e25a35f34346%2FLAFORGE%20Logo%20Wide%20White%20text.png?1513146690112">
+          </div>
+        </div>
+        <div class="button-row">
+          <a class="lfo-button-link" href="https://www.socialflo.com/apply" target="_blank">
+            <button class="lfo-button">
+              PROTOTYPE YOUR MOD
+            </button>
+          </a>
+          <a class="lfo-button-link" href="https://www.socialflo.com/discover" target="_blank">
+            <button class="lfo-button">
+              VIEW UPCOMING MODS
+            </button>
+          </a>
+        </div>
       </div>
     </div>
     
@@ -29,7 +80,5 @@
             integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
             crossorigin="anonymous"></script>
     <script src="/client.js"></script>
-
   </body>
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 </html>

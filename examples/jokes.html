@@ -1,0 +1,36 @@
+<!-- JavaScript to include -->
+<script>
+  // Create new instance of utilityClass
+  let utils = new UtilityClass();
+  
+  // Hook into onTouchpadInput to listen for specific event
+  utils.onTouchpadInput((direction) => {
+    if (direction[0] === 'left swipe') {
+      grabJoke()
+    }
+  });
+  
+  // Simulate touchpad input
+  utils.simulateOnTouchpadInput(['left swipe']);
+
+  function grabJoke() {
+    $.ajax({
+      url: 'https://api.chucknorris.io/jokes/random',
+      method: 'GET',
+      header: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Origin': '<origin>'
+      },
+      success: function(data){
+        var newHtml = '<p>' + data.value + '</p>';
+        var shadow = document.querySelector('#eyewear-pane').shadowRoot;
+        shadow.innerHTML = newHtml;
+      },
+      error: function(error) {
+        var newHtml = '<p>Failed to grab joke</p>';
+        var shadow = document.querySelector('#eyewear-pane').shadowRoot;
+        shadow.innerHTML = newHtml;
+      }
+    });
+  };
+</script>

@@ -7,10 +7,18 @@
 <script src="https://fb.me/react-dom-15.3.0.min.js"></script>
 <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
 <script type="text/babel">
-  const TestComponent = React.createClass({ render: function() { return (
-  <div className="commentBox">
-    Hello, world! I am a React component.
-  </div>
-  ); } }); ReactDOM.render(
-  <TestComponent />, document.getElementById('content') );
+const TestComponent = React.createClass({
+  render: function() {
+    return (
+      <div className="commentBox">
+        Hello, world! I am a React component.
+      </div>
+    );
+  }
+});
+
+ReactDOM.render(
+  <TestComponent />,
+  document.getElementById('eyewear-pane').shadowRoot
+);
 </script>

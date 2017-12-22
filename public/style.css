@@ -32,6 +32,12 @@ a {
   margin-right: 30px;
 }
 
+@media screen and (max-width: 634px) {
+  .button-row {
+    text-align: left;
+  }
+}
+
 .eyewear-pane {
   float: right;
   height: 240px;
@@ -41,9 +47,17 @@ a {
 .eyewear-view {
   width: 100%;
   background: url('https://cdn.glitch.com/ee5f60f9-5a06-44de-938e-e25a35f34346%2FsocialFLO%20background.png?1504233807523') no-repeat center fixed;
+  background-position: -45px -45px;
   background-size: cover;
   height: 450px;
   padding: 20px 35px;
+}
+
+.jellyfish-logo {
+  bottom: 15px;
+  height: 40px;
+  position:absolute; 
+  right: 15PX;
 }
 
 .header {
@@ -137,8 +151,8 @@ a {
 }
 
 .status-running {
-  border-bottom: 3px solid #7ED321;
-  border-top: 3px solid #7ED321;
+  border-bottom: 2px solid #7ED321;
+  border-top: 2px solid #7ED321;
   color: #fff;
   float: left;
   font-weight: 500;
@@ -151,6 +165,15 @@ a {
   height: 55px;
   position: absolute;
   width: 55px;
+}
+
+.copyright {
+  color: #fff;
+  font-size: 10px;
+  font-weight: 100;
+  bottom: 0;
+  position: absolute;
+  left: 42%;
 }
 
 @keyframes slideCircle {

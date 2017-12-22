@@ -11,8 +11,6 @@ $(function() {
   let final = pathname.slice(0, end);
   $('#js-mod-name').html(final)
   
-  
-  
   customElements.define('eyewear-pane', class extends HTMLElement {
     constructor() {
       super();
@@ -21,14 +19,13 @@ $(function() {
       let shadowRoot = this.attachShadow({mode: 'open'});
       shadowRoot.innerHTML = `
         <slot id="devpane" name="devpane">
-          <span>Your content will render here when you insert markup into the js-eyewearView tag.</span>
+          <span>Your content will render here when you insert markup into the eyewear-pane tag.</span>
         </slot>
       `;
     }
     
   });
 });
-
 
   /**
   * Class representing the api for interacting with the wearable device.
@@ -37,7 +34,7 @@ $(function() {
   */
   class DeviceApi {
     constructor() {
-      console.log('deviceapi');
+      console.log('New DeviceApi class initialized.');
       // Private variables representing various device info.
       this._audioLevel = 0;
       this._buttonInput = [];
